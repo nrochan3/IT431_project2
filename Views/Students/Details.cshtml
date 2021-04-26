@@ -1,0 +1,218 @@
+﻿@model AdmissionsWebsite.Student
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Student</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            First Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MiddleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MiddleName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SSN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SSN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HomePhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomePhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CellPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CellPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StreetAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StreetAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.City)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.State)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.State)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ZipCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ZipCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DOB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DOB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender.GenderType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gender.GenderType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HSName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HSName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HSCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HSCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GraduationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GraduationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentGPA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentGPA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MathSATScore)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MathSATScore)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VerbalSATScore)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VerbalSATScore)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CombinedSATScore)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CombinedSATScore)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Major.MajorName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Major.MajorName)
+        </dd>
+
+        <dt>
+            Enrollment Semester
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Semester.SemesterName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnrollmentYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnrollmentYear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SubmissionDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SubmissionDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AdmissionDecision.DecisionType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdmissionDecision.DecisionType)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.StudentId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

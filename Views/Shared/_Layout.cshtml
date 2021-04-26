@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Admissions Department of George Mason University</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script type="text/javascript">
+        function start()
+        {
+            var myLastModifiedDate = document.lastModified;
+            // Display the last modified date and time in the <p> element
+            document.getElementById("lastModifiedDate").innerHTML = myLastModifiedDate;
+        }
+        // Register window load event handler and call the start function
+        window.addEventListener("load", start, false);
+    </script>
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" style="background-color:#006633; border-color:#006633; color: white;">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="~/Home/Index"><img src="~/Images/MasonLogo.jpg" alt="University Logo" style="width:45px; height:51px;"></a>
+                @Html.ActionLink("George Mason University", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li><a href="~/Home/Apply" style="color:#FFCC33; font-weight: bold; 
+                    border: 3px dashed #FFCC33; border-bottom-right-radius: 20px; 
+                    border-top-left-radius: 20px; padding-top: 5px; padding-bottom: 5px; 
+                    margin-top: 8px;"><i class="fa fa-pencil"></i> APPLY</a></li>
+                </ul>
+
+                @Html.Partial("_LoginPartial")
+
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer style="background-color: #FFCC33; padding: 10px;">
+            <div class="row">
+                <div class="col-sm-7">
+                    <img src="~/Images/GMULogo.jpg" style="width: 170px; height: 120px; float: left; margin-right: 10px;">
+                    <p>
+                        <em>
+                            This website is developed as an educational project.
+                            Certain materials are included under the fair use exemption of the U.S.
+                            Copyright Law and have been prepared according to the multimedia fair use
+                            guidelines and are restricted from further use.
+                            Images are taken from <a href="https://facilities.gmu.edu/projects/list/" style="color:#006633;">Facilities.gmu.edu</a>,
+                            <a href="https://gmu.smugmug.com/CampusBuildingsLandmarksandFac/Other-Landmarks/i-8MSDGzg/A" style="color:#006633;">Gmu.smugmug.com</a>,
+                            and <a href="https://ocm.gmu.edu/mason-brand" style="color:#006633;">Ocm.gmu.edu.</a>
+                            Information is taken from <a href="https://www.gmu.edu" style="color:#006633;">George Mason University.</a>
+                        </em>
+                    </p>
+                </div>
+                <div class="col-sm-5">
+                    <p style="float:right;">
+                        4400 University Drive<br />
+                        Fairfax, Virginia 22030<br />
+                        +1 (703) 993-1000<br /><br />
+
+                        <a href="https://www.facebook.com/georgemason">
+                            <i class="fa fa-facebook-square fa-2x" style="color:#006633;"></i>
+                        </a> &nbsp;&nbsp;
+                        <a href="https://www.instagram.com/georgemasonu/">
+                            <i class="fa fa-instagram fa-2x" style="color:#006633;"></i>
+                        </a> &nbsp;&nbsp;
+                        <a href="https://twitter.com/georgemasonu">
+                            <i class="fa fa-twitter-square fa-2x" style="color:#006633;"></i>
+                        </a><br />
+
+                        &copy; @DateTime.Now.Year - George Mason University<br />
+
+                        Last modified: <span id="lastModifiedDate"></span>
+
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

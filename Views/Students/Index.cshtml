@@ -6,9 +6,9 @@
 
 <h2>Applicant lists</h2>
 
-<p>
+@*<p>
     @Html.ActionLink("Create New", "Create")
-</p>
+</p>*@
 <table class="table">
     <tr>
         <th>
@@ -30,7 +30,6 @@
             @Html.DisplayNameFor(model => model.AdmissionDecision.DecisionType)
         </th>
         <th></th>
-        <th></th>
     </tr>
 
 @foreach (var item in Model) {
@@ -46,18 +45,18 @@
         <td>
             @Html.DisplayFor(modelItem => item.CurrentGPA)
 
-            @if (item.CurrentGPA < 3)
+            @*@if (item.CurrentGPA < 3)
             {
                 <span class="label label-warning">!</span>
-            }
+            }*@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.CombinedSATScore)
 
-            @if (item.CombinedSATScore < 1000)
+            @*@if (item.CombinedSATScore < 1000)
             {
                 <span class="label label-warning">!</span>
-            }
+            }*@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Semester.SemesterName)
@@ -73,12 +72,12 @@
             @Html.ActionLink("Delete", "Delete", new { id=item.StudentId })
         </td>
 
-        @if (item.CombinedSATScore < 1000 || item.CurrentGPA < 3)
+        @*@if (item.CombinedSATScore < 1000 || item.CurrentGPA < 3)
         {
             <td class="alert alert-dismissible alert-warning">
                 Fail the minimum qualification.
             </td>
-        }
+        }*@
 
     </tr>
 }

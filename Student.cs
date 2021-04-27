@@ -105,7 +105,7 @@ namespace AdmissionsWebsite
         public int VerbalSATScore { get; set; }
 
         [Display(Name = "Combined SAT Score")]
-        public int? CombinedSATScore { get; set; }
+        public int? CombinedSATScore => MathSATScore + VerbalSATScore;
 
         public int? MajorId { get; set; }
 
